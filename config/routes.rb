@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  resources :users
   resources :posts
   root "main_page#index"
   get 'main_page/index'

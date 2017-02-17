@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :posts
   root "main_page#index"
   get 'main_page/index'
 

@@ -7,12 +7,17 @@
 
     <div class="posts">
       <%= render @posts %>
-
-      <%= link_to 'New Post', new_post_path, :class => "btn btn-warning btn-lg" %>
     </div> <!-- end posts -->
+
+    <%= link_to 'New Post', new_post_path, :class => "btn btn-warning btn-lg" %>
   </div> <!-- end posts-blog-blurb -->
   <div class="sidebar-posts-listing col-sm-3">
-    <p> this will be a listing of post titles </p>
+    <h3> Post listing </h3>
+
+    <% @posts.each do |post| %>
+        <%= render partial: "post_list", locals: {post: post} %>
+    <% end %>
+
   </div> <!-- end sidebar-posts-listing -->
 
 </div> <!-- end posts-main-page -->

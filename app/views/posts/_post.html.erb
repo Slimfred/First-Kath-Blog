@@ -1,0 +1,9 @@
+<div class="post col-sm-9">
+  <h3 class="post-title"> <%= post.title %> </h3>
+  <p class="post-body"> <%= post.body %> </p>
+
+  <%= link_to 'Edit', edit_post_path(post), :class => "btn btn-warning btn-sm" %>
+  <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-warning btn-sm" %>
+
+
+</div>

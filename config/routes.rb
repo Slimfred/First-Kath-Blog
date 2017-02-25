@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users
   resources :posts
 
-  root "main_page#index"
+  root "posts#index"
 
   get "main_page/index"
   get "main_page/about"

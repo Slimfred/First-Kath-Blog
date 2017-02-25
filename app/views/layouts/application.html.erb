@@ -30,7 +30,7 @@
         </div> <!--end navbar-header -->
         <div class="collapse navbar-collapse">
           <ul class="nav nav-pills navbar-right">
-            <li> <%= link_to "Home", main_page_index_path %> </li>
+            <li> <%= link_to "Home", posts_path %> </li>
             <li> <%= link_to "About", main_page_about_path %> </li>
             <!-- <li> Link_to "Posts", need path here </li> -->
             <li> <%= link_to "Contact", main_page_contact_path %> </li>
@@ -50,11 +50,11 @@
 
     <%= yield %>
 
-    <footer class="navbar-fixed-bottom">
+    <!-- <footer class="navbar-fixed-bottom">
       <div class="container-fluid sticky-footer">
         <p class="p-footer"> &copy 2017 Kath Daily <p>
-      </div> <!-- end container-fluid -->
-    </footer>
+      </div>
+    </footer> -->
 
   </body>
 </html>

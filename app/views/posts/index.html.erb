@@ -1,29 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<div class="posts-main-page col-sm-12">
+  <div class="posts-blog-blurb col-sm-9">
+    <h1> Kath's Blog </h1>
+    <h3> This will be a blurb about the blog.  This is my blog I hope you like it.  I'm writing it because I want to share stuff.  I think this blurb should be short and sweet. </h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>Subject</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <div class="posts">
+      <%= render @posts %>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.subject %></td>
-        <td><%= post.body %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <%= link_to 'New Post', new_post_path, :class => "btn btn-warning btn-lg" %>
+    </div> <!-- end posts -->
+  </div> <!-- end posts-blog-blurb -->
+  <div class="sidebar-posts-listing col-sm-3">
+    <p> this will be a listing of post titles </p>
+  </div> <!-- end sidebar-posts-listing -->
 
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+</div> <!-- end posts-main-page -->

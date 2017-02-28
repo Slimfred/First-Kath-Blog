@@ -1,3 +1,22 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  padding-top: 5%;
+}
+.date-posted {
+  font-style: italic;
+}
+.posts {
+  padding-left: 5%;
+}
+.sidebar-posts-listing {
+  padding-left: 2%;
+}
+
+// Show Post Page
+
+.show-post {
+  // margin: 2%;
+}

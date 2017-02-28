@@ -1,23 +1,25 @@
-<p id="notice"><%= notice %></p>
+<div class="posts-index-page container-fluid">
+  <p id="notice"><%= notice %></p>
 
-<div class="posts-main-page col-sm-12">
-  <div class="posts-blog-blurb col-sm-9">
-    <h1> Kath's Blog </h1>
-    <h3> This will be a blurb about the blog.  This is my blog I hope you like it.  I'm writing it because I want to share stuff.  I think this blurb should be short and sweet. </h3>
-    <div class="new-post-button">
-      <%= link_to 'New Post', new_post_path, :class => "btn btn-warning btn-lg" %>
-    </div>
+  <div class="posts-main-page col-sm-12">
+    <div class="posts-blog-blurb col-sm-9">
+      <h1> Kath's Blog </h1>
+      <h3> This will be a blurb about the blog.  This is my blog I hope you like it.  I'm writing it because I want to share stuff.  I think this blurb should be short and sweet. </h3>
+      <div class="new-post-button">
+        <%= link_to 'New Post', new_post_path, :class => "btn btn-success btn-lg" %>
+      </div>
 
-    <div class="posts col-sm-11">
-      <%= render @posts %>
-    </div> <!-- end posts -->
-  </div> <!-- end posts-blog-blurb -->
+      <div class="posts col-sm-11">
+        <%= render @posts %>
+      </div> <!-- end posts -->
+    </div> <!-- end posts-blog-blurb -->
 
-  <div class="sidebar-posts-listing col-sm-3">
-    <h3> Post listing </h3>
+    <div class="sidebar-posts-listing col-sm-3">
+      <h3> Post listing </h3>
 
-    <% @posts.each do |post| %>
-        <%= render partial: "post_list", locals: {post: post} %>
-    <% end %>
-  </div> <!-- end sidebar-posts-listing -->
-</div> <!-- end posts-main-page -->
+      <% @posts.each do |post| %>
+          <%= render partial: "post_list", locals: {post: post} %>
+      <% end %>
+    </div> <!-- end sidebar-posts-listing -->
+  </div> <!-- end posts-index-page -->
+</div>

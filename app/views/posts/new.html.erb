@@ -1,5 +1,10 @@
-<h1>New Post</h1>
+<div class="new-post-page container-fluid">
 
-<%= render 'form', post: @post %>
+  <h1>New Post</h1>
 
-<%= link_to 'Back', posts_path %>
+  <%= render 'form', post: @post %>
+
+  <div class="show-back-links col-sm-9 col-sm-offset-1">
+    <p><%= link_to 'Cancel New Post', posts_path, :class => "btn btn-danger cancel-edit-btn" %></p>
+  </div>
+</div>

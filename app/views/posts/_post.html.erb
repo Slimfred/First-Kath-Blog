@@ -4,7 +4,7 @@
   <p class="post-body"> <%= post.body.truncate_words(150) %> </p>
 
   <%= link_to 'Edit', edit_post_path(post), :class => "btn btn-warning btn-sm" %>
-  <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-warning btn-sm" %>
+  <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-sm" %>
 
   <hr>
 

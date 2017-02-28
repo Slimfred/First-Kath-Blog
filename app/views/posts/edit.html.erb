@@ -1,6 +1,10 @@
-<h1>Editing Post</h1>
+<div class="edit-page container-fluid">
+  <h1>Edit Post</h1>
 
-<%= render 'form', post: @post %>
+  <%= render 'form', post: @post %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+  <div class="show-back-links col-sm-9 col-sm-offset-1">
+    <p><%= link_to 'Cancel Update', @post, :class => "btn btn-danger cancel-edit-btn" %></p>
+    <p><%= link_to 'Back to All Posts', posts_path, :class => "btn btn-primary back-to-all-btn" %></p>
+  </div>
+</div>

@@ -1,13 +1,14 @@
 <div class="show-post-page container-fluid">
-  <p id="notice"><%= notice %></p>
 
   <div class="show-post col-sm-10 col-sm-offset-1">
     <h3 class="post-title"> <%= @post.title %> </h3>
     <p class="date-posted"> <%= @post.created_at %> </p>
     <p class="post-body"> <%= @post.body %> </p>
 
-    <%= link_to 'Edit Post', edit_post_path(@post), :class => "btn btn-warning" %>
-    <%= link_to 'Delete Post', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+    <% if signed_in? && current_user.admin? %>
+      <%= link_to 'Edit Post', edit_post_path(@post), :class => "btn btn-warning" %>
+      <%= link_to 'Delete Post', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+    <% end %>
     <%= link_to 'Back to All Posts', posts_path, :class => "btn btn-primary back-to-all-btn" %>
 
   </div> <!-- end show-post -->

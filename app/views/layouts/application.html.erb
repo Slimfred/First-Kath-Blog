@@ -42,17 +42,25 @@
     <% if notice %>
       <p id="notice"><%= notice %></p>
     <% end %>
+
     <% if alert %>
-      <div class="alert alert-danger" role="alert">
-        <h3> <%= alert %> </h3>
-      </div>
+        <h3 class="alert alert-danger" role="alert"> <%= alert %> </h3>
     <% end %>
 
     <%= yield %>
 
     <footer class="navbar-fixed-bottom">
       <div class="container-fluid sticky-footer">
-        <p class="p-footer"> &copy 2017 Kath Daily </p>
+        <p class="p-footer col-sm-2"> &copy 2017 Kath Daily </p>
+        <ul class="nav col-sm-3">
+          <li>
+          <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          <% else %>
+            <%= link_to('Admin Login', new_user_session_path) %>
+          <% end %>
+          </li>
+        </ul>
       </div>
     </footer>
 

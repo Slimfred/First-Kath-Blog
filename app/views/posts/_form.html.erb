@@ -24,7 +24,9 @@
 
     <div class="field post-body">
       <%= f.label :body %>
-      <%= f.text_area :body, class: "form-control" %>
+
+      <%= f.cktext_area :body, :class => 'form-control' %>
+
     </div>
 
     <div class="actions">

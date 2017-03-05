@@ -37,6 +37,13 @@ class Ability
         can :read, Post
       end
 
+    # Always performed
+    can :access, :ckeditor   # needed to access Ckeditor filebrowser
+
+    # Performed checks for actions:
+    can [:read, :create, :destroy], Ckeditor::Picture
+    can [:read, :create, :destroy], Ckeditor::AttachmentFile
+
     # user ||= User.new # guest user (not logged in)
     # can :manage, User, id: user.id
   end

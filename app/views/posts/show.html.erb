@@ -3,7 +3,7 @@
   <div class="show-post col-sm-10 col-sm-offset-1">
     <h3 class="post-title"> <%= @post.title %> </h3>
     <p class="date-posted"> <%= @post.created_at %> </p>
-    <p class="post-body"> <%= @post.body %> </p>
+    <p class="post-body"> <%= @post.body.html_safe %> </p>
 
     <% if signed_in? && current_user.admin? %>
       <%= link_to 'Edit Post', edit_post_path(@post), :class => "btn btn-warning" %>

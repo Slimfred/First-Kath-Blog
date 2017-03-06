@@ -6,4 +6,6 @@ class Post < ApplicationRecord
 
   scope :created_at_desc, -> {order(created_at: :desc)}
 
+  mount_uploader :image, ImageUploader
+
 end

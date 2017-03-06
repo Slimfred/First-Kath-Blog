@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/galetahub/ckeditor.git
+  revision: 11d3a5b905646c6fd397f7710f95fb9eb29f0865
+  specs:
+    ckeditor (4.2.2)
+      cocaine
+      orm_adapter (~> 0.5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -43,9 +51,6 @@ GEM
     builder (3.2.3)
     byebug (9.0.6)
     cancancan (1.16.0)
-    ckeditor (4.1.6)
-      cocaine
-      orm_adapter (~> 0.5.0)
     climate_control (0.1.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
@@ -176,7 +181,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   cancancan
-  ckeditor (~> 4.1.6)
+  ckeditor!
   coffee-rails (~> 4.2)
   devise
   jbuilder (~> 2.5)

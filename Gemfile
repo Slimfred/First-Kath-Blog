@@ -36,7 +36,7 @@ gem 'devise'
 
 gem 'cancancan'
 
-gem 'ckeditor', '~> 4.1.6'
+gem 'ckeditor', github: 'galetahub/ckeditor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
